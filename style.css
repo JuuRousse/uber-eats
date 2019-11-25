@@ -3,6 +3,11 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -26,10 +31,6 @@ body {
 .header-buttons {
   text-align: right;
   margin-top: 5px;
-}
-
-.container {
-  margin-left: 0;
 }
 
 .sign-in {
@@ -90,6 +91,9 @@ h3 a {
   text-decoration: none;
 }
 
+.restaurants img { 
+  display: inline-block;
+}
 .cuisines {
   margin: 0;
   padding-left: 0;
@@ -152,15 +156,35 @@ h3 a {
   margin: 0;
 }
 
-select {
+.footer-select {
+  width: 173px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 32px;
+}
+
+.footer-select::after {
+  content: "";
+  width: 14px;
+  height: 8px;
+  background: url(./img/arrow-down.svg) center no-repeat;
+  font-size: 14px;
+  color: #ffffff;
+  position: absolute;
+  right: 8px;
+  top: 16px;
+}
+
+.footer-select select {
   border-radius: 2px;
   outline: none;
   color: #FFFFFF;
-  background: url(./img/world.svg) left no-repeat #3B3B3B;
-  width: 173px;
+  background: url(./img/world.svg) 16px 10px no-repeat #3B3B3B;
+  width: 193px;
   height: 40px;
-  margin-top: 32px;
   border: 0;
+  padding-left: 44px;
+  font-size: 13px;
 }
 
 option {
@@ -216,8 +240,9 @@ span {
 }
 
 .download-app {
-  padding-top: 24px;
-  padding-bottom: 19px;
+  padding: 24px 0 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer-end {
@@ -250,3 +275,4 @@ span {
 .footer-end a:hover {
   color: #FFFFFF;
 }
+
